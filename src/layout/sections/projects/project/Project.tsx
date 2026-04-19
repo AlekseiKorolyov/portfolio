@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {Icon} from "../../../../components/icon/Icon.tsx";
 
 type ProjectPropsType = {
     title: string;
     text: string;
     techText: string;
     src: string
+    iconId: string
 };
 
 export const Project = (props: ProjectPropsType) => {
@@ -16,8 +18,10 @@ export const Project = (props: ProjectPropsType) => {
             <Text>{props.text}</Text>
             <TechText>{props.techText}</TechText>
             <FlexWrapper>
-                <Link href={"#"}></Link>
-                <Link href={"#"}></Link>
+                <Icon iconId={"link"}/>
+                <Link href={"#"}>Live Preview</Link>
+                <Icon iconId={props.iconId}/>
+                <Link href={"#"}>View Code</Link>
             </FlexWrapper>
         </StyledProject>
     );
@@ -25,8 +29,14 @@ export const Project = (props: ProjectPropsType) => {
 
 const StyledProject = styled.div`
     background-color: chocolate;
+    max-width: 373px;
+    width: 100%;
+    margin: 10px;
 `
 const Image = styled.img`
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
 `
 
 const Link = styled.a`
