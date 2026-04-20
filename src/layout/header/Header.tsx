@@ -21,7 +21,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     padding: 20px 0;
-    position: fixed;
+    //position: fixed;
     top: 0;
     left: 0;
     right: 0;
