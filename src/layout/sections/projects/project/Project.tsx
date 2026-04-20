@@ -13,30 +13,35 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
-            <Image src={props.src} alt=""/>
-            <Title>{props.title}</Title>
-            <Text>{props.text}</Text>
-            <TechText>{props.techText}</TechText>
-            <FlexWrapper>
-                <Icon iconId={"link"}/>
-                <Link href={"#"}>Live Preview</Link>
-                <Icon iconId={props.iconId}/>
-                <Link href={"#"}>View Code</Link>
+            <FlexWrapper direction={"column"} align={"center"}>
+                <Image src={props.src} alt=""/>
+                <Title>{props.title}</Title>
+                <Text>{props.text}</Text>
+                <TechText>{props.techText}</TechText>
+                <FlexWrapper direction={"row"} align={"center"}>
+                    <Icon iconId={"link"}/>
+                    <Link href={"#"}>Live Preview</Link>
+                    <Icon iconId={props.iconId}/>
+                    <Link href={"#"}>View Code</Link>
+                </FlexWrapper>
             </FlexWrapper>
         </StyledProject>
     );
 };
 
 const StyledProject = styled.div`
-    background-color: chocolate;
-    max-width: 373px;
+    background-color:#363636;
+    max-width: 25%;
     width: 100%;
-    margin: 10px;
+    margin: 65px 48px;
+    border-radius: 12px;
 `
 const Image = styled.img`
     width: 100%;
     height: 260px;
     object-fit: cover;
+    border-radius: 10px 10px 0 0;
+
 `
 
 const Link = styled.a`
@@ -44,11 +49,11 @@ const Link = styled.a`
 `
 
 const Title = styled.h3`
-
+    margin: 50px 0 15px;
 `
 
 const Text = styled.p`
-
+    text-align: start;
 `
 
 const TechText = styled.p`
