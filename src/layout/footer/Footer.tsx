@@ -26,11 +26,12 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-    min-height: 20vh;
+    padding: 40px 0;
 `
 const SocialIconsList = styled.ul`
     display: flex;
-    
+    gap: 20px;
+    margin: 30px 0;
 `
 const SocialItem = styled.li`
 
@@ -40,5 +41,8 @@ const SocialLink = styled.a`
 
 `
 const Copyright = styled.small`
-
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.5 ;
 `
