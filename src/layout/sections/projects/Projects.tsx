@@ -20,7 +20,7 @@ export const Projects = () => {
                     <SectionTitle>Projects</SectionTitle>
                     <SectionText>Things I’ve built so far</SectionText>
                 </FlexWrapper>
-                <FlexWrapper wrap={"wrap"} justify={"space-around"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                     <Project title={"Project Tile goes here"}
                              text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                              techText={"Tech stack : HTML , JavaScript, SASS, React"}

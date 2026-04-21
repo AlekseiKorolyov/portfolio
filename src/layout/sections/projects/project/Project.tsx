@@ -15,25 +15,34 @@ export const Project = (props: ProjectPropsType) => {
         <StyledProject>
             <FlexWrapper direction={"column"} align={"center"}>
                 <Image src={props.src} alt=""/>
-                <Title>{props.title}</Title>
-                <Text>{props.text}</Text>
-                <TechText>{props.techText}</TechText>
-                <FlexWrapper direction={"row"} align={"center"}>
-                    <Icon iconId={"link"}/>
-                    <Link href={"#"}>Live Preview</Link>
-                    <Icon iconId={props.iconId}/>
-                    <Link href={"#"}>View Code</Link>
-                </FlexWrapper>
+                <Description>
+                    <Title>{props.title}</Title>
+                    <Text>{props.text}</Text>
+                    <TechText>{props.techText}</TechText>
+                    <FlexWrapper>
+                        <FlexWrapper direction={"row"}>
+                            <Icon iconId={"link"}/>
+                            <Link href={"#"}>Live Preview</Link>
+
+                        </FlexWrapper>
+                        <FlexWrapper>
+                            <Icon iconId={props.iconId}/>
+                            <Link href={"#"}>View Code</Link>
+
+                        </FlexWrapper>
+                    </FlexWrapper>
+                </Description>
             </FlexWrapper>
         </StyledProject>
     );
 };
 
 const StyledProject = styled.div`
-    background-color:#363636;
-    max-width: 25%;
+    background-color: #363636;
+    max-width: 30%;
+    min-height: 567px;
     width: 100%;
-    margin: 65px 48px;
+    margin: 65px 0;
     border-radius: 12px;
 `
 const Image = styled.img`
@@ -44,16 +53,20 @@ const Image = styled.img`
 
 `
 
+const Description = styled.div`
+    padding: 25px 20px;
+`
+
 const Link = styled.a`
 
 `
 
 const Title = styled.h3`
-    margin: 50px 0 15px;
 `
 
 const Text = styled.p`
     text-align: start;
+    margin: 17px 0 12px;
 `
 
 const TechText = styled.p`

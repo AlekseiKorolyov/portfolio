@@ -9,8 +9,5 @@ export const SectionTitle = styled.h2`
     text-transform: normal-case;
     text-decoration: none;
     margin-bottom: 40px;
-    
-    &span {
-       
-    }
+    text-align: center;
 `
