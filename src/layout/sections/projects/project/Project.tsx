@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {Icon} from "../../../../components/icon/Icon.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 type ProjectPropsType = {
     title: string;
     text: string;
     techText: string;
     src: string
-    iconId: string
 };
 
 export const Project = (props: ProjectPropsType) => {
@@ -19,18 +19,19 @@ export const Project = (props: ProjectPropsType) => {
                     <Title>{props.title}</Title>
                     <Text>{props.text}</Text>
                     <TechText>{props.techText}</TechText>
-                    <FlexWrapper>
-                        <FlexWrapper direction={"row"}>
-                            <Icon iconId={"link"}/>
-                            <Link href={"#"}>Live Preview</Link>
 
-                        </FlexWrapper>
-                        <FlexWrapper>
-                            <Icon iconId={props.iconId}/>
-                            <Link href={"#"}>View Code</Link>
+                    <LinkGroup>
+                    <ProjectLink href="#" target="_blank">
+                    <Icon iconId={"link"}  width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
+                    <span>Live Preview</span>
+                    </ProjectLink>
 
-                        </FlexWrapper>
-                    </FlexWrapper>
+                    <ProjectLink href="https://github.com" target="_blank">
+                    <Icon iconId={"gitHubHeader"} width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
+                    <span>View Code</span>
+                    </ProjectLink>
+                    </LinkGroup>
+
                 </Description>
             </FlexWrapper>
         </StyledProject>
@@ -57,9 +58,7 @@ const Description = styled.div`
     padding: 25px 20px;
 `
 
-const Link = styled.a`
 
-`
 
 const Title = styled.h3`
 `
@@ -72,3 +71,34 @@ const Text = styled.p`
 const TechText = styled.p`
 
 `
+
+const LinkGroup = styled.div`
+    display: flex;
+    gap: 40px;
+    align-items: center;
+`;
+
+
+const ProjectLink = styled.a`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: ${theme.colors.font};
+    text-decoration: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    
+    span {
+        text-decoration: underline;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+`;
