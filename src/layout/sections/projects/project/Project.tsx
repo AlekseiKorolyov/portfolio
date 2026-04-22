@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {Icon} from "../../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.ts";
 
@@ -13,7 +12,6 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
-            <FlexWrapper direction={"column"} align={"center"}>
                 <Image src={props.src} alt=""/>
                 <Description>
                     <Title>{props.title}</Title>
@@ -33,16 +31,15 @@ export const Project = (props: ProjectPropsType) => {
                     </LinkGroup>
 
                 </Description>
-            </FlexWrapper>
         </StyledProject>
     );
 };
 
 const StyledProject = styled.div`
     background-color: #363636;
-    max-width: 30%;
+    max-width: 375px;
     min-height: 567px;
-    width: 100%;
+    //width: 100%;
     margin: 65px 0;
     border-radius: 12px;
 `
@@ -55,25 +52,33 @@ const Image = styled.img`
 `
 
 const Description = styled.div`
-    padding: 25px 20px;
+    padding: 25px 10px;
 `
 
 
 
 const Title = styled.h3`
+    text-align: center;
 `
 
 const Text = styled.p`
-    text-align: start;
-    margin: 17px 0 12px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0;
+    text-align: left;
+    text-decoration: none;
+    margin: 15px 0;
 `
 
-const TechText = styled.p`
-
+const TechText = styled(Text)`
+    font-size: 16px;
+    margin-bottom: 30px;
 `
 
 const LinkGroup = styled.div`
     display: flex;
+    justify-content: center;
     gap: 40px;
     align-items: center;
 `;

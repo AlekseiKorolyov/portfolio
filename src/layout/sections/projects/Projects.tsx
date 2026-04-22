@@ -25,37 +25,31 @@ export const Projects = () => {
                              text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                              techText={"Tech stack : HTML , JavaScript, SASS, React"}
                              src={proj1}
-                             iconId={"gitHub"}
                     />
                     <Project title={"Project Tile goes here"}
                              text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                              techText={"Tech stack : HTML , JavaScript, SASS, React"}
                              src={proj2}
-                             iconId={"gitHub"}
                     />
                     <Project title={"Project Tile goes here"}
                              text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                              techText={"Tech stack : HTML , JavaScript, SASS, React"}
                              src={proj3}
-                             iconId={"gitHub"}
                     />
                     <Project title={"Project Tile goes here"}
                              text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                              techText={"Tech stack : HTML , JavaScript, SASS, React"}
                              src={proj4}
-                             iconId={"gitHub"}
                     />
                     <Project title={"Project Tile goes here"}
                              text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                              techText={"Tech stack : HTML , JavaScript, SASS, React"}
                              src={proj5}
-                             iconId={"gitHub"}
                     />
                     <Project title={"Project Tile goes here"}
                              text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                              techText={"Tech stack : HTML , JavaScript, SASS, React"}
                              src={proj6}
-                             iconId={"gitHub"}
                     />
                 </FlexWrapper>
             </Container>
