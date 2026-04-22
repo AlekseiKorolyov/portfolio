@@ -9,13 +9,18 @@ export const Contact = () => {
     return (
         <StyledContact>
             <Container>
-                <SectionTitle>For any questions, please write to me</SectionTitle>
                 <StyledForm>
+
                     <Field placeholder={"name"}/>
                     <Field placeholder={"subject"}/>
                     <Field placeholder={"message"} as={"textarea"}/>
                     <Button type={"submit"}>Send message</Button>
                 </StyledForm>
+                <SectionTitle>
+                    For any questions please mail me:
+                    hi@pavanmg.in
+                </SectionTitle>
+
             </Container>
         </StyledContact>
     );
