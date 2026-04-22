@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     
     body {
         max-width: 1600px;
-        margin: 0;
+        margin: 0 auto;
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -41,10 +41,5 @@ export const GlobalStyle = createGlobalStyle`
     section {
         padding: 100px 0;
     }
-
-    //code {
-    //    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    //    monospace;
-    //}
 
 `

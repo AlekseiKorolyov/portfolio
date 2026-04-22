@@ -9,13 +9,12 @@ export const About = () => {
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
                     <TextWrapper>
-                        <SmallText>Hi 👋,</SmallText>
-                        <Name>My name is Pavan MG</Name>
-                        <AboutTitle>I build things for web</AboutTitle>
+                        <span>Hi 👋,</span>
+                        <span>My name is</span>
+                        <span><Name>Pavan MG</Name></span>
+                        <span>I build things for web </span>
                     </TextWrapper>
-                    <PhotoWrapper>
                         <Photo src={photo} alt=""/>
-                    </PhotoWrapper>
                 </FlexWrapper>
             </Container>
         </StyledAbout>
@@ -23,12 +22,25 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
+    padding-top: 200px;
     min-height: 100vh;
     display: flex;
 `
 
-const TextWrapper = styled.div`
-    text-align: start;
+const TextWrapper = styled.h2`
+    max-width: 636px;
+    font-family: Poppins;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: -1px;
+    text-align: left;
+    text-transform: normal-case;
+    text-decoration: none;
+
+    span {
+        display: block;
+    }
 `
 
 const Photo = styled.img`
@@ -40,31 +52,11 @@ const Photo = styled.img`
     background-clip: content-box;
 `
 
-const PhotoWrapper = styled.div`
-    width: 440px;
-    height: 440px;
-    position: relative;
-    z-index: 0;
-    
-`
-
-const SmallText = styled.h2`
-    font-size: 14px;
-    font-weight: 400;
-`
-
-const Name = styled.h2`
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    margin: 10px 0;
+const Name = styled(TextWrapper)`
     background: linear-gradient(19.49304203489544deg, #00c0fd 0%, #e70faa 100%);
     background-clip: text;
     color: transparent;
 `
-const AboutTitle = styled.h1`
-    font-size: 27px;
-    font-weight: 400;
-`
+
 
 
