@@ -20,7 +20,7 @@ export const Project = (props: ProjectPropsType) => {
 
                     <LinkGroup>
                     <ProjectLink href="#" target="_blank">
-                    <Icon iconId={"link"}  width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
+                    <Icon iconId={"link"}  width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
                     Live Preview
                     </ProjectLink>
 
