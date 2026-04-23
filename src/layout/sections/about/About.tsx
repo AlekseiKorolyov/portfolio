@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import photo from "../../../assets/images/50353683 1.jpg"
+import photo from "../../../assets/images/50353683-1.webp"
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/Container.ts";
 
