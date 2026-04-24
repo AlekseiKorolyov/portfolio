@@ -20,13 +20,13 @@ export const Project = (props: ProjectPropsType) => {
 
                     <LinkGroup>
                     <ProjectLink href="#" target="_blank">
-                    <Icon iconId={"link"}  width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
-                    <span>Live Preview</span>
+                    <Icon iconId={"link"}  width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
+                    Live Preview
                     </ProjectLink>
 
                     <ProjectLink href="https://github.com" target="_blank">
                     <Icon iconId={"gitHubHeader"} width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
-                    <span>View Code</span>
+                    View Code
                     </ProjectLink>
                     </LinkGroup>
 
@@ -58,7 +58,6 @@ const Description = styled.div`
 
 
 const Title = styled.h3`
-    text-align: center;
 `
 
 const Text = styled.p`
@@ -66,7 +65,6 @@ const Text = styled.p`
     font-weight: 300;
     line-height: 26px;
     letter-spacing: 0;
-    text-align: left;
     text-decoration: none;
     margin: 15px 0;
 `

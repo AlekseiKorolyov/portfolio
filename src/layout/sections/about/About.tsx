@@ -29,7 +29,7 @@ const StyledAbout = styled.section`
 
 const TextWrapper = styled.h2`
     max-width: 636px;
-    font-family: Poppins;
+    font-family: Poppins sans-serif;
     font-size: 58px;
     font-weight: 700;
     line-height: 70px;

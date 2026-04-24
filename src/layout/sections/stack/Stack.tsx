@@ -22,11 +22,11 @@ export const Stack = () => {
                            title={"CSS"}/>
                     <Skill iconId={"js"}
                            title={"Java Script"}/>
-                    <Skill iconId={"sass"}
+                    <Skill iconId={"sass"} viewBox={"0 -16 120 120"}
                            title={"Sass"}/>
-                    <Skill iconId={"react"}
+                    <Skill iconId={"react"} viewBox={"-4 -10 120 120"}
                            title={"React"}/>
-                    <Skill iconId={"github"}
+                    <Skill iconId={"github"} viewBox={"-6 -6 100 100"}
                            title={"GitHub"}/>
                     <Skill iconId={"ts"}
                            title={"Type Script"}/>
@@ -34,11 +34,11 @@ export const Stack = () => {
                            title={"Styled Components"}/>
                     <Skill iconId={"vscode"}
                            title={"VSCode"}/>
-                    <Skill iconId={"tailwind"}
+                    <Skill iconId={"tailwind"} viewBox={"4 10 120 120"}
                            title={"Tailwind"}/>
                     <Skill iconId={"vector"}
                            title={"Vector"}/>
-                    <Skill iconId={"gitIcon"}
+                    <Skill iconId={"gitIcon"} viewBox={"-7 -7 120 120"}
                            title={"Git"}/>
                 </FlexWrapper>
             </Container>

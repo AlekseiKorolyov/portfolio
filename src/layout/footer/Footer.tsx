@@ -1,26 +1,34 @@
 import styled from "styled-components";
-import {Icon} from "../../components/icon/Icon.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {Container} from "../../components/Container.ts";
+import {Logo} from "../../components/logo/Logo.tsx";
+import {LinkBlock} from "../../components/iconBlock/LinkBlock.tsx";
 
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FlexWrapper direction={"column"} align={"center"}>
-                <SocialIconsList>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon iconId={"twitter"}/>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon iconId={"linkedin"}/>
-                        </SocialLink>
-                    </SocialItem>
-                </SocialIconsList>
-                <Copyright>Designed and built by Pavan MG with Love & Coffee</Copyright>
-            </FlexWrapper>
+            <Container>
+                <WrapperFooter>
+                    <Logo/>
+                    <FlexWrapper align={"center"} justify={"space-around"}>
+                        <a href="#">+91 12345 09876</a>
+                        <a href="#">info@example.com</a>
+                        <LinkBlock/>
+                    </FlexWrapper>
+                </WrapperFooter>
+                <Copyright>
+                    {/*<FooterGradient>*/}
+                    {/*</FooterGradient>*/}
+                    Designed and built by
+                    <span> Pavan MG </span>
+                    with
+                    <span> Love </span>
+                    &
+                    <span> Coffee </span>
+
+                    </Copyright>
+            </Container>
         </StyledFooter>
     );
 };
@@ -28,21 +36,26 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
     padding: 40px 0;
 `
-const SocialIconsList = styled.ul`
+
+const WrapperFooter = styled.div`
     display: flex;
-    gap: 20px;
-    margin: 30px 0;
-`
-const SocialItem = styled.li`
+    flex-direction: row;
+    justify-content: flex-start;
+
+    width: 100%;
+    border-bottom: 2px solid #42446e;
 
 `
 
-const SocialLink = styled.a`
-
-`
-const Copyright = styled.small`
+const Copyright = styled.p`
+    padding: 20px 0;
     font-weight: 400;
     font-size: 12px;
+    opacity: 0.5;
     text-align: center;
-    opacity: 0.5 ;
+    background: linear-gradient(19.49304203489544deg, #00c0fd 0%, #e70faa 100%);
+    background-clip: text;
+    span {
+        color: transparent;
+    }
 `
