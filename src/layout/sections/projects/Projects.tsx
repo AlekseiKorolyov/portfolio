@@ -10,7 +10,46 @@ import proj5 from "../../../assets/images/Rectangle-23.webp";
 import proj6 from "../../../assets/images/Rectangle-24.webp";
 import {Container} from "../../../components/Container.ts";
 import {SectionText} from "../../../components/SectionText.tsx";
+import {GridWrapper} from "../../../components/GridWrapper.tsx";
 
+const progectsArr = [
+    {
+        title: "Project Tile goes here",
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        src: proj1
+    },
+    {
+        title: "Project Tile goes here",
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        src: proj2
+    },
+    {
+        title: "Project Tile goes here",
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        src: proj3
+    },
+    {
+        title: "Project Tile goes here",
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        src: proj4
+    },
+    {
+        title: "Project Tile goes here",
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        src: proj5
+    },
+    {
+        title: "Project Tile goes here",
+        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        src: proj6
+    }
+]
 
 export const Projects = () => {
     return (
@@ -20,8 +59,15 @@ export const Projects = () => {
                     <SectionTitle>Projects</SectionTitle>
                     <SectionText>Things I’ve built so far</SectionText>
                 </FlexWrapper>
-                <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-                    <Project title={"Project Tile goes here"}
+                <GridWrapper minmax={"373px, auto"} gap={"49px"}>
+                    {
+                        progectsArr.map((p) => <Project title={p.title}
+                                                                                               text={p.text}
+                                                                                               techText={p.techText}
+                                                                                               src={p.src}
+                        />)
+                    }
+                    {/*<Project title={"Project Tile goes here"}
                              text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                              techText={"Tech stack : HTML , JavaScript, SASS, React"}
                              src={proj1}
@@ -41,17 +87,11 @@ export const Projects = () => {
                              techText={"Tech stack : HTML , JavaScript, SASS, React"}
                              src={proj4}
                     />
-                    <Project title={"Project Tile goes here"}
-                             text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                             techText={"Tech stack : HTML , JavaScript, SASS, React"}
-                             src={proj5}
+                    <Project
                     />
-                    <Project title={"Project Tile goes here"}
-                             text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                             techText={"Tech stack : HTML , JavaScript, SASS, React"}
-                             src={proj6}
-                    />
-                </FlexWrapper>
+                    <Project
+                    />*/}
+                </GridWrapper>
             </Container>
         </StyledProjects>
     );

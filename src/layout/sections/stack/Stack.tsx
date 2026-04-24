@@ -4,6 +4,7 @@ import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
 import {SectionText} from "../../../components/SectionText.tsx";
+import {GridWrapper} from "../../../components/GridWrapper.tsx";
 
 
 
@@ -15,7 +16,7 @@ export const Stack = () => {
                     <SectionTitle>My Tech Stack</SectionTitle>
                     <SectionText> Technologies I’ve been working with recently</SectionText>
                 </FlexWrapper>
-                <FlexWrapper justify={"space-between"} wrap={"wrap"}>
+                <GridWrapper  minmax={"120px, auto"} gap={"90px"}>
                     <Skill iconId={"html"}
                            title={"HTML"}/>
                     <Skill iconId={"css"}
@@ -40,7 +41,7 @@ export const Stack = () => {
                            title={"Vector"}/>
                     <Skill iconId={"gitIcon"} viewBox={"-7 -7 120 120"}
                            title={"Git"}/>
-                </FlexWrapper>
+                </GridWrapper>
             </Container>
         </StyledStack>
     );
