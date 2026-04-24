@@ -2,12 +2,12 @@ import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import styled from "styled-components";
 import {Project} from "./project/Project.tsx";
-import proj1 from "../../../assets/images/Rectangle 8.png";
-import proj2 from "../../../assets/images/Rectangle 16.png";
-import proj3 from "../../../assets/images/Rectangle 18.png";
-import proj4 from "../../../assets/images/Rectangle 22.png";
-import proj5 from "../../../assets/images/Rectangle 23.png";
-import proj6 from "../../../assets/images/Rectangle 24.png";
+import proj1 from "../../../assets/images/Rectangle-8.webp";
+import proj2 from "../../../assets/images/Rectangle-16.webp";
+import proj3 from "../../../assets/images/Rectangle-18.webp";
+import proj4 from "../../../assets/images/Rectangle-22.webp";
+import proj5 from "../../../assets/images/Rectangle-23.webp";
+import proj6 from "../../../assets/images/Rectangle-24.webp";
 import {Container} from "../../../components/Container.ts";
 import {SectionText} from "../../../components/SectionText.tsx";
 
