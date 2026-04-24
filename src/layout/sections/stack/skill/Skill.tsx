@@ -5,13 +5,19 @@ import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 type SkillPropsType = {
     iconId: string
     title: string
+    width?: string
+    height?: string
+    viewBox?: string
 }
 
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
             <FlexWrapper direction={"column"} align={"center"}>
-                <Icon iconId={props.iconId} />
+                <Icon iconId={props.iconId}
+                      width={props.width || "120"}
+                      height={props.height || "120"}
+                      viewBox={props.viewBox || "0 0 120 120"}/>
                 <SkillTitle>{props.title}</SkillTitle>
             </FlexWrapper>
         </StyledSkill>
@@ -20,7 +26,7 @@ export const Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div`
     max-width: 120px;
-    padding: 40px 90px 62px;
+    //padding: 40px 90px 62px;
 `
 const SkillTitle = styled.h3`
     margin: 50px 0 15px;
