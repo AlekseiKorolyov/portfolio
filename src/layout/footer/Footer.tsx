@@ -11,15 +11,14 @@ export const Footer = () => {
             <Container>
                 <WrapperFooter>
                     <Logo/>
-                    <FlexWrapper align={"center"} justify={"space-around"}>
-                        <a href="#">+91 12345 09876</a>
-                        <a href="#">info@example.com</a>
+                    <FlexWrapper align={"center"} justify={"flex-end"} gap={"30px"}>
+                        <LinkInfo href="#">+91 12345 09876</LinkInfo>
+                        <LinkInfo href="#">info@example.com</LinkInfo>
                         <LinkBlock/>
                     </FlexWrapper>
                 </WrapperFooter>
                 <Copyright>
-                    {/*<FooterGradient>*/}
-                    {/*</FooterGradient>*/}
+
                     Designed and built by
                     <span> Pavan MG </span>
                     with
@@ -47,14 +46,19 @@ const WrapperFooter = styled.div`
 
 `
 
+const LinkInfo = styled.a`
+    margin: 0;
+`
+
 const Copyright = styled.p`
     padding: 20px 0;
     font-weight: 400;
     font-size: 12px;
     opacity: 0.5;
     text-align: center;
-    background: linear-gradient(19.49304203489544deg, #00c0fd 0%, #e70faa 100%);
+    background: linear-gradient(19.49304203489544deg, #00bdff 0%, #bf0085 100%);
     background-clip: text;
+
     span {
         color: transparent;
     }

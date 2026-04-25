@@ -38,6 +38,7 @@ const TextWrapper = styled.h2`
     letter-spacing: -1px;
     text-align: left;
     text-decoration: none;
+    margin: 0;
 
     span {
         display: block;
@@ -45,6 +46,8 @@ const TextWrapper = styled.h2`
 `
 
 const PhotoWrapper = styled.div`
+    margin: 0;
+
     ::before {
         content: "";
         width: 628px;

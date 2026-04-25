@@ -10,7 +10,6 @@ export const Contact = () => {
         <StyledContact>
             <Container>
                 <StyledForm>
-
                     <Field placeholder={"name"}/>
                     <Field placeholder={"subject"}/>
                     <Field placeholder={"message"} as={"textarea"}/>
@@ -18,9 +17,10 @@ export const Contact = () => {
                 </StyledForm>
                 <SectionTitle>
                     For any questions please mail me:
-                    hi@pavanmg.in
                 </SectionTitle>
-
+                <LinkMail as="a" href="#">
+                    hi@pavanmg.in
+                </LinkMail>
             </Container>
         </StyledContact>
     );
@@ -35,8 +35,8 @@ const StyledForm = styled.form`
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    margin: 0 auto;
-    
+    padding-bottom: 100px;
+
     textarea {
         resize: none;
         height: 155px;
@@ -47,20 +47,24 @@ const Field = styled.input`
     background-color: ${theme.colors.primaryBg};
     border: 1px solid dimgrey;
     padding: 7px 15px;
-    
-    font-family: 'poppins' , sans-serif;
+
+    font-family: 'poppins', sans-serif;
     font-weight: 400;
     font-size: 12px;
     letter-spacing: 0.05em;
     color: ${theme.colors.font};
-    
+
     &::placeholder {
         color: ${theme.colors.font};
         text-transform: capitalize;
     }
-    
+
     &:focus-visible {
         outline: 1px solid dimgrey;
     }
 ;
+`
+
+const LinkMail = styled(SectionTitle)`
+    padding-top: 10px;
 `
