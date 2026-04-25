@@ -14,7 +14,9 @@ export const About = () => {
                         <span><Name>Pavan MG</Name></span>
                         <span>I build things for web </span>
                     </TextWrapper>
+                    <PhotoWrapper>
                         <Photo src={photo} alt=""/>
+                    </PhotoWrapper>
                 </FlexWrapper>
             </Container>
         </StyledAbout>
@@ -35,11 +37,19 @@ const TextWrapper = styled.h2`
     line-height: 70px;
     letter-spacing: -1px;
     text-align: left;
-    text-transform: normal-case;
     text-decoration: none;
 
     span {
         display: block;
+    }
+`
+
+const PhotoWrapper = styled.div`
+    ::before {
+        content: "";
+        width: 628px;
+        height: 628px;
+        background-image: url("../../../assets/images/Abstract.svg");
     }
 `
 

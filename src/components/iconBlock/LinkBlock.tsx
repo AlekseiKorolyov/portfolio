@@ -18,7 +18,8 @@ export const LinkBlock = () => {
     );
 };
 
-const StyledIconBlock = styled.div`
+const StyledIconBlock = styled.nav`
+    margin: 0;
     display: flex;
     gap: 20px;
 `

@@ -62,9 +62,9 @@ export const Projects = () => {
                 <GridWrapper minmax={"373px, auto"} gap={"49px"}>
                     {
                         progectsArr.map((p) => <Project title={p.title}
-                                                                                               text={p.text}
-                                                                                               techText={p.techText}
-                                                                                               src={p.src}
+                                                                                            text={p.text}
+                                                                                            techText={p.techText}
+                                                                                            src={p.src}
                         />)
                     }
                     {/*<Project title={"Project Tile goes here"}

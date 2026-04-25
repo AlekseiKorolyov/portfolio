@@ -24,7 +24,9 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
     );
 };
 
-const StyledHeaderMenu = styled.nav`
+const StyledHeaderMenu = styled.div`
+    margin: 0;
+    
     ul {
         display: flex;
         gap: 30px;
