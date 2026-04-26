@@ -2,19 +2,19 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme.ts";
 
 
-export const HeaderMenu = (props: { menuItems: Array<string> }) => {
+export const HeaderMenu = (props: { menuItems: Array<{ section:string, id:string }> }) => {
     return (
         <StyledHeaderMenu>
             <ul>
                 {props.menuItems.map((item, index) => {
                     return <ListItem key={index}>
-                        <Link href="">
-                            {item}
+                        <Link href={`#${item.id}`}>
+                            {item.section}
                             <Mask>
-                                <span>{item}</span>
+                                <span>{item.section}</span>
                             </Mask>
                             <Mask>
-                                <span>{item}</span>
+                                <span>{item.section}</span>
                             </Mask>
                         </Link>
                     </ListItem>

@@ -47,7 +47,7 @@ const stacksArr = [
 
 export const Stack = () => {
     return (
-        <StyledStack>
+        <StyledStack id={"stack"}>
             <Container>
                 <FlexWrapper direction="column" align={"center"}>
                     <SectionTitle>My Tech Stack</SectionTitle>

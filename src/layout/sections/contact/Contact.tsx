@@ -7,7 +7,7 @@ import {theme} from "../../styles/Theme.ts";
 
 export const Contact = () => {
     return (
-        <StyledContact>
+        <StyledContact id={"contact"}>
             <Container>
                 <StyledForm>
                     <Field placeholder={"name"}/>
@@ -67,4 +67,8 @@ const Field = styled.input`
 
 const LinkMail = styled(SectionTitle)`
     padding-top: 10px;
+    background: linear-gradient(19.49304203489544deg, #00c0fd 0%, #e70faa 100%);
+    background-clip: text;
+    color: transparent;
+
 `

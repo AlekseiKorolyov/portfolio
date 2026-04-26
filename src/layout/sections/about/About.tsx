@@ -5,7 +5,7 @@ import {Container} from "../../../components/Container.ts";
 
 export const About = () => {
     return (
-        <StyledAbout>
+        <StyledAbout id={"about"}>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
                     <TextWrapper>

@@ -5,7 +5,24 @@ import {Container} from "../../components/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {LinkBlock} from "../../components/iconBlock/LinkBlock.tsx";
 
-const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
+const items = [
+    {
+        section: "About",
+        id: "about"
+    },
+    {
+        section: "Tech Stack",
+        id: "stack",
+    },
+    {
+        section: "Projects",
+        id: "projects"
+    },
+    {
+        section: "Contact",
+        id: "contact"
+    },
+]
 
 export const Header = () => {
     return (

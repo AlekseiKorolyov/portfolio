@@ -53,44 +53,17 @@ const progectsArr = [
 
 export const Projects = () => {
     return (
-        <StyledProjects>
-            <Container>
+        <StyledProjects id={"projects"}>
+            <Container >
                 <FlexWrapper direction="column" align={"center"}>
                     <SectionTitle>Projects</SectionTitle>
                     <SectionText>Things I’ve built so far</SectionText>
                 </FlexWrapper>
                 <GridWrapper minmax={"373px, auto"} gap={"49px"}>
                     {
-                        progectsArr.map((p) => <Project title={p.title}
-                                                                                            text={p.text}
-                                                                                            techText={p.techText}
-                                                                                            src={p.src}
+                        progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}
                         />)
                     }
-                    {/*<Project title={"Project Tile goes here"}
-                             text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                             techText={"Tech stack : HTML , JavaScript, SASS, React"}
-                             src={proj1}
-                    />
-                    <Project title={"Project Tile goes here"}
-                             text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                             techText={"Tech stack : HTML , JavaScript, SASS, React"}
-                             src={proj2}
-                    />
-                    <Project title={"Project Tile goes here"}
-                             text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                             techText={"Tech stack : HTML , JavaScript, SASS, React"}
-                             src={proj3}
-                    />
-                    <Project title={"Project Tile goes here"}
-                             text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                             techText={"Tech stack : HTML , JavaScript, SASS, React"}
-                             src={proj4}
-                    />
-                    <Project
-                    />
-                    <Project
-                    />*/}
                 </GridWrapper>
             </Container>
         </StyledProjects>
