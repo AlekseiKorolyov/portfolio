@@ -12,19 +12,19 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
-                <Image src={props.src} alt=""/>
+                <Image src={props.src} alt="my project image"/>
                 <Description>
                     <Title>{props.title}</Title>
                     <Text>{props.text}</Text>
                     <TechText>{props.techText}</TechText>
 
                     <LinkGroup>
-                    <ProjectLink href="#" target="_blank">
-                    <Icon iconId={"link"}  width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
+                    <ProjectLink href="#" target="_blank" aria-label="Linck my project">
+                    <Icon iconId={"#"}  width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
                     Live Preview
                     </ProjectLink>
 
-                    <ProjectLink href="https://github.com" target="_blank">
+                    <ProjectLink href="https://github.com" target="_blank" aria-label="GitHub linck">
                     <Icon iconId={"gitHubHeader"} width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
                     View Code
                     </ProjectLink>
@@ -39,7 +39,6 @@ const StyledProject = styled.div`
     background-color: #363636;
     max-width: 375px;
     min-height: 567px;
-    //width: 100%;
     margin: 65px 0;
     border-radius: 12px;
 `

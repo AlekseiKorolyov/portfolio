@@ -5,6 +5,7 @@ type IconPropsType = {
     width?: string
     height?: string
     viewBox?: string
+    title?: string
 }
 
 export const Icon = (props: IconPropsType) => {
@@ -14,7 +15,9 @@ export const Icon = (props: IconPropsType) => {
                   viewBox={props.viewBox || "0 0 120 120"}
              preserveAspectRatio="xMidYMid slice"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                  xmlns="http://www.w3.org/2000/svg"
+             aria-labelledby={props.iconId}>
+            <title id={props.iconId}>{props.title}</title>
             <use xlinkHref={`${iconsSvg}#${props.iconId}`} />
         </svg>
     );

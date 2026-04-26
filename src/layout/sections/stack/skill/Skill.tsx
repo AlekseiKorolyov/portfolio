@@ -17,7 +17,7 @@ export const Skill = (props: SkillPropsType) => {
                 <Icon iconId={props.iconId}
                       width={props.width || "120"}
                       height={props.height || "120"}
-                      viewBox={props.viewBox || "0 0 120 120"}/>
+                      viewBox={props.viewBox || "0 0 120 120"} />
                 <SkillTitle>{props.title}</SkillTitle>
             </FlexWrapper>
         </StyledSkill>

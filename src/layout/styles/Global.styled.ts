@@ -29,9 +29,9 @@ export const GlobalStyle = createGlobalStyle`
         color: inherit;
     }
     
-    button, 
+    button:hover,
     a:hover {
-        
+        opacity: 0.7;
     }
     
     ul {

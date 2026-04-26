@@ -55,9 +55,10 @@ export const Stack = () => {
                 </FlexWrapper>
                 <GridWrapper  minmax={"120px, auto"} gap={"90px"}>
                     {
-                        stacksArr.map((s) => <Skill iconId={s.iconId}
-                                                   viewBox={s.viewBox}
-                                                   title={s.title}
+                        stacksArr.map((s) =>
+                            <Skill iconId={s.iconId}
+                                   viewBox={s.viewBox}
+                                   title={s.title}
                         />)
                     }
                 </GridWrapper>

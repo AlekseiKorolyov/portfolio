@@ -8,7 +8,7 @@ export const HeaderMenu = (props: { menuItems: Array<{ section:string, id:string
             <ul>
                 {props.menuItems.map((item, index) => {
                     return <ListItem key={index}>
-                        <Link href={`#${item.id}`}>
+                        <Link href={`#${item.id}`} aria-label={`linck ${item.section} section`}>
                             {item.section}
                             <Mask>
                                 <span>{item.section}</span>
