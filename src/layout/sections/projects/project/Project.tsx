@@ -16,7 +16,7 @@ export const Project = (props: ProjectPropsType) => {
                 <Description>
                     <Title>{props.title}</Title>
                     <Text>{props.text}</Text>
-                    <TechText>{props.techText}</TechText>
+                    <TechText><h4>Tech stack :</h4><span>{props.techText}</span></TechText>
 
                     <LinkGroup>
                     <ProjectLink href="#" target="_blank" aria-label="Linck my project">
@@ -53,7 +53,7 @@ const Image = styled.img`
 `
 
 const Description = styled.div`
-    padding: 25px 10px;
+    padding: 25px 30px;
 `
 
 
@@ -69,23 +69,31 @@ const Text = styled.p`
     margin: 15px 0;
 `
 
-const TechText = styled(Text)`
-    font-size: 16px;
+const TechText = styled.div`
+    font-size: 14px;
     margin-bottom: 30px;
+    display: flex;
+    
+    h4 {
+        margin: 0;
+    }
+    
+    span {
+        white-space: nowrap; 
+    }
 `
 
 const LinkGroup = styled.div`
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    align-items: center;
-`;
+    gap: 50px;
+`
 
 
 const ProjectLink = styled.a`
+    margin: 0;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     color: ${theme.colors.font};
     text-decoration: none;
     font-size: 16px;

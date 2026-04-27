@@ -52,13 +52,16 @@ export const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         color: inherit;
+        
     }
     
     button:hover,
     a:hover {
         color: antiquewhite;
-        transform: scale(1.2) translateY(-8px);
+        mix-blend-mode: difference;
+        transform: scale(1.2) translateY(-4px);
         transform-origin: center;
+        
     }
     
     ul {
