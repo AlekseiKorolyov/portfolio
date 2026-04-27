@@ -20,7 +20,7 @@ export const Project = (props: ProjectPropsType) => {
 
                     <LinkGroup>
                     <ProjectLink href="#" target="_blank" aria-label="Linck my project">
-                    <Icon iconId={"#"}  width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
+                    <Icon iconId={"link"}  width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
                     Live Preview
                     </ProjectLink>
 
@@ -39,8 +39,10 @@ const StyledProject = styled.div`
     background-color: #363636;
     max-width: 375px;
     min-height: 567px;
-    margin: 65px 0;
     border-radius: 12px;
+    &:hover {
+    transform: scale(1.1)
+}
 `
 const Image = styled.img`
     width: 100%;
@@ -57,14 +59,13 @@ const Description = styled.div`
 
 
 const Title = styled.h3`
+    font-size: calc( (100vw - 360px) / (1600 - 360) * (28 - 14) + 14px);
+    font-weight: 500;
+    line-height: 93%;
+    color: #ccc;
 `
 
 const Text = styled.p`
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 26px;
-    letter-spacing: 0;
-    text-decoration: none;
     margin: 15px 0;
 `
 
@@ -99,8 +100,5 @@ const ProjectLink = styled.a`
         height: 20px;
         flex-shrink: 0;
     }
-
-    &:hover {
-        opacity: 0.7;
-    }
+    
 `;

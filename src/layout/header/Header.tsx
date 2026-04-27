@@ -30,7 +30,7 @@ export const Header = () => {
             <Container>
                 <FlexWrapper justify={"space-around"} align={"center"} gap={"50px"}>
                     <FlexWrapper justify={"space-between"} align={"center"}>
-                        <Logo/>
+                        <Logo href={"#contact"}/>
                         <HeaderMenu menuItems={items}/>
                     </FlexWrapper>
                     <LinkBlock/>

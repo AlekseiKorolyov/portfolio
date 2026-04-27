@@ -10,8 +10,11 @@ export const GlobalStyle = createGlobalStyle`
        box-sizing: border-box;
     }
     
+    html {
+        font-size: 10px;
+    }
+    
     body {
-        max-width: 1600px;
         margin: 0 auto;
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -24,6 +27,34 @@ export const GlobalStyle = createGlobalStyle`
         
     }
     
+    h2 {
+        font-size: calc( (100vw - 360px) / (1600 - 360) * (58 - 29) + 29px);
+        font-weight: 700;
+        line-height: 121%;
+        letter-spacing: -0.02em;
+        color: #d9d9d9;
+    }
+    
+    h3 {
+        font-size: calc( (100vw - 360px) / (1600 - 360) * (48 - 24) + 24px);
+        font-weight: 700;
+        line-height: 54%;
+        color: #ccc;
+        
+    }
+
+    h4 {
+        font-size: calc( (100vw - 360px) / (1600 - 360) * (32 - 16) + 16px);
+        font-weight: 400;
+        line-height: 81%;
+        text-align: center;
+        color: #a7a7a7;
+    }
+    
+    p {
+        font-size: calc( (100vw - 360px) / (1600 - 360) * (18 - 9) + 9px);
+    }
+    
     a {
         text-decoration: none;
         color: inherit;
@@ -31,7 +62,9 @@ export const GlobalStyle = createGlobalStyle`
     
     button:hover,
     a:hover {
-        opacity: 0.7;
+        color: antiquewhite;
+        transform: scale(1.2) translateY(-8px);
+        transform-origin: center;
     }
     
     ul {

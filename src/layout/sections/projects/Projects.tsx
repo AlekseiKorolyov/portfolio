@@ -1,5 +1,4 @@
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import styled from "styled-components";
 import {Project} from "./project/Project.tsx";
 import proj1 from "../../../assets/images/Rectangle-8.webp";
@@ -55,10 +54,8 @@ export const Projects = () => {
     return (
         <StyledProjects id={"projects"}>
             <Container >
-                <FlexWrapper direction="column" align={"center"}>
                     <SectionTitle>Projects</SectionTitle>
                     <SectionText>Things I’ve built so far</SectionText>
-                </FlexWrapper>
                 <GridWrapper minmax={"373px, auto"} gap={"49px"}>
                     {
                         progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}

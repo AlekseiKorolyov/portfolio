@@ -26,8 +26,7 @@ export const Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div`
     max-width: 120px;
-    //padding: 40px 90px 62px;
 `
-const SkillTitle = styled.h3`
+const SkillTitle = styled.p`
     margin-top: 20px;
 `

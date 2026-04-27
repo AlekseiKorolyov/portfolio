@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
@@ -49,10 +48,9 @@ export const Stack = () => {
     return (
         <StyledStack id={"stack"}>
             <Container>
-                <FlexWrapper direction="column" align={"center"}>
                     <SectionTitle>My Tech Stack</SectionTitle>
-                    <SectionText> Technologies I’ve been working with recently</SectionText>
-                </FlexWrapper>
+                    <SectionText>Technologies I’ve been working with recently</SectionText>
+
                 <GridWrapper  minmax={"120px, auto"} gap={"90px"}>
                     {
                         stacksArr.map((s) =>

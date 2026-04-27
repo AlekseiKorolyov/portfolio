@@ -15,7 +15,7 @@ export const About = () => {
                         <span>I build things for web </span>
                     </TextWrapper>
                     <PhotoWrapper>
-                        <Photo src={photo} alt=""/>
+                        <Photo src={photo} alt="My photo"/>
                     </PhotoWrapper>
                 </FlexWrapper>
             </Container>
@@ -32,10 +32,13 @@ const StyledAbout = styled.section`
 const TextWrapper = styled.h2`
     max-width: 636px;
     font-family: Poppins sans-serif;
-    font-size: 58px;
+
+    font-size: calc( (100vw - 360px) / (1600 - 360) * (58 - 29) + 29px);
     font-weight: 700;
-    line-height: 70px;
-    letter-spacing: -1px;
+    line-height: 121%;
+    letter-spacing: -0.02em;
+    color: #d9d9d9;
+    
     text-align: left;
     text-decoration: none;
     margin: 0;
@@ -48,12 +51,13 @@ const TextWrapper = styled.h2`
 const PhotoWrapper = styled.div`
     margin: 0;
 
-    ::before {
+/*    &::after {
         content: "";
+        //display: inline-block;
         width: 628px;
         height: 628px;
-        background-image: url("../../../assets/images/Abstract.svg");
-    }
+        background-image: url("../../../assets/images/Abs.svg");
+    }*/
 `
 
 const Photo = styled.img`
