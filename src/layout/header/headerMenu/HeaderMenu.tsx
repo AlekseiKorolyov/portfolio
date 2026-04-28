@@ -39,7 +39,7 @@ const Link = styled.a`
     font-size: 20px;
     font-weight: 500;
     text-align: center;
-    color: transparent;
+    color: transparent ;
 `
 
 const Mask = styled.span`

@@ -18,7 +18,7 @@ export const Contact = () => {
                 <SectionTitle>
                     For any questions please mail me:
                 </SectionTitle>
-                <LinkMail as="a" href="#">
+                <LinkMail as="a" href="mailto:email">
                     hi@pavanmg.in
                 </LinkMail>
             </Container>

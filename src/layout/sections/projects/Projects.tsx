@@ -15,37 +15,37 @@ const progectsArr = [
     {
         title: "Project Tile goes here",
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        techText: "HTML , JavaScript, SASS, React",
         src: proj1
     },
     {
         title: "Project Tile goes here",
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        techText: "HTML , JavaScript, SASS, React",
         src: proj2
     },
     {
         title: "Project Tile goes here",
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        techText: "HTML , JavaScript, SASS, React",
         src: proj3
     },
     {
         title: "Project Tile goes here",
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        techText: "HTML , JavaScript, SASS, React",
         src: proj4
     },
     {
         title: "Project Tile goes here",
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        techText: "HTML , JavaScript, SASS, React",
         src: proj5
     },
     {
         title: "Project Tile goes here",
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        techText: "Tech stack : HTML , JavaScript, SASS, React",
+        techText: "HTML , JavaScript, SASS, React",
         src: proj6
     }
 ]
