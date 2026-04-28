@@ -11,7 +11,7 @@ export const About = () => {
                     <TextWrapper>
                         <span>Hi 👋,</span>
                         <span>My name is</span>
-                        <span><Name>Pavan MG</Name></span>
+                        <Name as="span">Pavan MG</Name>
                         <span>I build things for web </span>
                     </TextWrapper>
                     <PhotoWrapper>
@@ -50,14 +50,20 @@ const TextWrapper = styled.h2`
 
 const PhotoWrapper = styled.div`
     margin: 0;
+    position: relative;
 
-/*    &::after {
+    &::after {
         content: "";
-        //display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 628px;
         height: 628px;
-        background-image: url("../../../assets/images/Abs.svg");
-    }*/
+        background-image: url("../../../../public/Abstract.svg");
+        background-size: contain;
+        z-index: -1; /* Ставим СТРОГО под фото */
+    }
 `
 
 const Photo = styled.img`
@@ -74,6 +80,4 @@ const Name = styled(TextWrapper)`
     background-clip: text;
     color: transparent;
 `
-
-
 
