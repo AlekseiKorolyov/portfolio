@@ -27,6 +27,13 @@ export const Contact = () => {
 };
 
 const StyledContact = styled.section`
+    ${SectionTitle} {
+        padding-bottom: 30px;
+    }
+
+    ${Container} {
+        text-align: center;
+    }
 `
 const StyledForm = styled.form`
     max-width: 540px;
@@ -66,9 +73,8 @@ const Field = styled.input`
 `
 
 const LinkMail = styled(SectionTitle)`
-    padding-top: 10px;
     background: linear-gradient(19.49304203489544deg, #00c0fd 0%, #e70faa 100%);
     background-clip: text;
     color: transparent;
-
+    
 `

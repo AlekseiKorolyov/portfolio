@@ -57,8 +57,7 @@ export const GlobalStyle = createGlobalStyle`
     
     button:hover,
     a:hover {
-        color: antiquewhite;
-        mix-blend-mode: difference;
+        //mix-blend-mode: difference;
         transform: scale(1.2) translateY(-4px);
         transform-origin: center;
         
