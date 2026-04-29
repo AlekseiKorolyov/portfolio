@@ -27,6 +27,7 @@ const StyledAbout = styled.section`
     padding-top: 200px;
     min-height: 100vh;
     display: flex;
+    overflow: hidden;
 `
 
 const TextWrapper = styled.h2`
@@ -56,7 +57,7 @@ const PhotoWrapper = styled.div`
         content: "";
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 60%;
         transform: translate(-50%, -50%);
         width: 628px;
         height: 628px;
