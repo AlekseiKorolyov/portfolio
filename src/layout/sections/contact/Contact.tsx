@@ -9,18 +9,18 @@ export const Contact = () => {
     return (
         <StyledContact id={"contact"}>
             <Container>
-                <StyledForm>
-                    <Field placeholder={"name"}/>
-                    <Field placeholder={"subject"}/>
-                    <Field placeholder={"message"} as={"textarea"}/>
-                    <Button type={"submit"}>Send message</Button>
-                </StyledForm>
                 <SectionTitle>
                     For any questions please mail me:
                 </SectionTitle>
                 <LinkMail as="a" href="mailto:email">
                     hi@pavanmg.in
                 </LinkMail>
+                <StyledForm>
+                    <Field placeholder={"name"}/>
+                    <Field placeholder={"subject"}/>
+                    <Field placeholder={"message"} as={"textarea"}/>
+                    <Button type={"submit"}>Send message</Button>
+                </StyledForm>
             </Container>
         </StyledContact>
     );
@@ -42,7 +42,8 @@ const StyledForm = styled.form`
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding-bottom: 100px;
+    padding-top: 100px;
+
 
     textarea {
         resize: none;
@@ -76,5 +77,5 @@ const LinkMail = styled(SectionTitle)`
     background: linear-gradient(19.49304203489544deg, #00c0fd 0%, #e70faa 100%);
     background-clip: text;
     color: transparent;
-    
+    margin-bottom: 100px;
 `

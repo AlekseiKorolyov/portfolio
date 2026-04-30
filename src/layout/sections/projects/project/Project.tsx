@@ -59,10 +59,7 @@ const Description = styled.div`
 
 
 const Title = styled.h3`
-    font-size: calc( (100vw - 360px) / (1600 - 360) * (28 - 14) + 14px);
-    font-weight: 500;
-    line-height: 93%;
-    color: #ccc;
+
 `
 
 const Text = styled.p`

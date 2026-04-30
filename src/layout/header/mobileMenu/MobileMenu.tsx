@@ -4,9 +4,9 @@ import {LinkBlock} from "../../../components/iconBlock/LinkBlock.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
 
-export const HeaderMenu = (props: { menuItems: Array<{ section: string, id: string }> }) => {
+export const MobileMenu = (props: { menuItems: Array<{ section: string, id: string }> }) => {
     return (
-        <StyledHeaderMenu>
+        <StyledMobileMenu>
             <FlexWrapper justify={"center"} gap={"50px"}>
                 <ul>
                     {props.menuItems.map((item, index) => {
@@ -25,11 +25,11 @@ export const HeaderMenu = (props: { menuItems: Array<{ section: string, id: stri
                 </ul>
                 <LinkBlock/>
             </FlexWrapper>
-        </StyledHeaderMenu>
+        </StyledMobileMenu>
     );
 };
 
-const StyledHeaderMenu = styled.div`
+const StyledMobileMenu = styled.div`
     margin: 0;
     
     @media ${theme.media.tablet} {

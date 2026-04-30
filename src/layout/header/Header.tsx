@@ -3,7 +3,7 @@ import {Logo} from "../../components/logo/Logo.tsx";
 import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
 import {Container} from "../../components/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {LinkBlock} from "../../components/iconBlock/LinkBlock.tsx";
+
 
 const items = [
     {
@@ -28,12 +28,9 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justify={"space-around"} align={"center"} gap={"50px"}>
-                    <FlexWrapper justify={"space-between"} align={"center"}>
-                        <Logo href={"#contact"}/>
-                        <HeaderMenu menuItems={items}/>
-                    </FlexWrapper>
-                    <LinkBlock/>
+                <FlexWrapper justify={"space-between"} align={"center"} gap={"50px"}>
+                    <Logo href={"#contact"}/>
+                    <HeaderMenu menuItems={items}/>
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -46,5 +43,6 @@ const StyledHeader = styled.header`
     top: 0;
     left: 0;
     right: 0;
+    background-color: #191919cc;
     z-index: 999999;
 `

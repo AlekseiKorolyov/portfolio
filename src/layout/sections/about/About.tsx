@@ -11,7 +11,7 @@ export const About = () => {
                     <TextWrapper>
                         <span>Hi 👋,</span>
                         <span>My name is</span>
-                        <Name as="span">Pavan MG</Name>
+                        <Name>Pavan MG</Name>
                         <span>I build things for web </span>
                     </TextWrapper>
                     <PhotoWrapper>
@@ -76,7 +76,7 @@ const Photo = styled.img`
     background-clip: content-box;
 `
 
-const Name = styled(TextWrapper)`
+const Name = styled.span`
     background: linear-gradient(19.49304203489544deg, #00c0fd 0%, #e70faa 100%);
     background-clip: text;
     color: transparent;

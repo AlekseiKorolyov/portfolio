@@ -38,15 +38,14 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h3 {
-        font-size: calc( (100vw - 360px) / (1600 - 360) * (32 - 16) + 16px);
+        font-size: calc( (100vw - 360px) / (1600 - 360) * (28 - 22) + 22px);
         font-weight: 400;
         line-height: 81%;
-        text-align: center;
         color: #a7a7a7;
     }
     
     p {
-        font-size: calc( (100vw - 360px) / (1600 - 360) * (18 - 9) + 9px);
+        font-size: calc( (100vw - 360px) / (1600 - 360) * (20 - 18) + 18px);
     }
     
     a {
@@ -57,7 +56,7 @@ export const GlobalStyle = createGlobalStyle`
     
     button:hover,
     a:hover {
-        //mix-blend-mode: difference;
+
         transform: scale(1.2) translateY(-4px);
         transform-origin: center;
         
