@@ -7,6 +7,11 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 export const MobileMenu = (props: { menuItems: Array<{ section: string, id: string }> }) => {
     return (
         <StyledMobileMenu>
+
+            <BurgerButton>
+                <span></span>
+            </BurgerButton>
+
             <FlexWrapper justify={"center"} gap={"50px"}>
                 <ul>
                     {props.menuItems.map((item, index) => {
@@ -44,6 +49,43 @@ const StyledMobileMenu = styled.div`
 
     @media ${theme.media.tablet} {
         display: none;
+    }
+`
+
+const BurgerButton = styled.button`
+    position: fixed;
+    top: -100px;
+    right: -100px;
+    width: 200px;
+    height: 200px;
+    
+    span {
+        display: block;
+        width: 36px;
+        height: 2px;
+        color: ${theme.colors.font};
+        position: absolute;
+        left: 40px;
+        bottom: 50px;
+        
+        &::before {
+            content: "";
+            display: block;
+            width: 36px;
+            height: 2px;
+            color: ${theme.colors.font};
+            position: absolute;
+            transform: translateY(-10px);
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 2px;
+            color: ${theme.colors.font};
+            position: absolute;
+            transform: translateY(10px);
+        }
     }
 `
 
