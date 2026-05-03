@@ -32,10 +32,9 @@ const StyledAbout = styled.section`
 
     ${FlexWrapper} {
         @media ${theme.media.tablet} {
-            flex-direction: column-reverse !important;
+            flex-direction: column-reverse;
             gap: 50px;
             text-align: center;
-        }
         }
 `
 
@@ -43,11 +42,11 @@ const TextWrapper = styled.h2`
     max-width: 636px;
     font-family: Poppins sans-serif;
 
-    font-size: calc( (100vw - 360px) / (1600 - 360) * (58 - 29) + 29px);
+    font-size: calc((100vw - 360px) / (1600 - 360) * (58 - 29) + 29px);
     font-weight: 700;
     letter-spacing: -0.02em;
     color: #d9d9d9;
-    
+
     text-align: left;
     text-decoration: none;
     margin: 0;
