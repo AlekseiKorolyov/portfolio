@@ -9,10 +9,10 @@ export const MobileMenu = (props: { menuItems: Array<{ section: string, id: stri
         <StyledMobileMenu>
             <FlexWrapper justify={"center"} gap={"50px"}>
 
-                <BurgerButton isOpen={true}>
+                <BurgerButton isOpen={false}>
                     <span></span>
                 </BurgerButton>
-                <MobileMenuPopup isOpen={true}>
+                <MobileMenuPopup isOpen={false}>
                     <ul>
                         {props.menuItems.map((item, index) => {
                             return <ListItem key={index}>

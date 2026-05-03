@@ -12,37 +12,36 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
-                <Image src={props.src} alt="my project image"/>
-                <Description>
-                    <Title>{props.title}</Title>
-                    <Text>{props.text}</Text>
-                    <TechText><h4>Tech stack :</h4><span>{props.techText}</span></TechText>
+            <Image src={props.src} alt="my project image"/>
+            <Description>
+                <Title>{props.title}</Title>
+                <Text>{props.text}</Text>
+                <TechText>Tech stack :{props.techText}</TechText>
 
-                    <LinkGroup>
+                <LinkGroup>
                     <ProjectLink href="#" target="_blank" aria-label="Linck my project">
-                    <Icon iconId={"link"}  width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
-                    Live Preview
+                        <Icon iconId={"link"} width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
+                        Live Preview
                     </ProjectLink>
 
                     <ProjectLink href="https://github.com" target="_blank" aria-label="GitHub linck">
-                    <Icon iconId={"gitHubHeader"} width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
-                    View Code
+                        <Icon iconId={"gitHubHeader"} width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
+                        View Code
                     </ProjectLink>
-                    </LinkGroup>
+                </LinkGroup>
 
-                </Description>
+            </Description>
         </StyledProject>
     );
 };
 
 const StyledProject = styled.div`
     background-color: #363636;
-    max-width: 375px;
-    min-height: 567px;
     border-radius: 12px;
+
     &:hover {
-    transform: scale(1.1)
-}
+        transform: scale(1.1)
+    }
 `
 const Image = styled.img`
     width: 100%;
@@ -57,8 +56,7 @@ const Description = styled.div`
 `
 
 
-
-const Title = styled.h3`
+const Title = styled.h4`
 
 `
 
@@ -66,17 +64,16 @@ const Text = styled.p`
     margin: 15px 0;
 `
 
-const TechText = styled.div`
-    font-size: 14px;
+const TechText = styled.h5`
     margin-bottom: 30px;
     display: flex;
-    
-    h4 {
+
+    h5 {
         margin: 0;
     }
-    
+
     span {
-        white-space: nowrap; 
+        white-space: nowrap;
     }
 `
 
@@ -95,7 +92,7 @@ const ProjectLink = styled.a`
     text-decoration: none;
     font-size: 16px;
     font-family: sans-serif;
-    
+
     span {
         text-decoration: underline;
     }
@@ -105,5 +102,5 @@ const ProjectLink = styled.a`
         height: 20px;
         flex-shrink: 0;
     }
-    
+
 `;

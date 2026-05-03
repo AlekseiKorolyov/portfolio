@@ -52,8 +52,6 @@ const LinkInfo = styled.a`
 
 const Copyright = styled.p`
     padding: 20px 0;
-    font-weight: 400;
-    font-size: 12px;
     opacity: 0.5;
     text-align: center;
     background: linear-gradient(19.49304203489544deg, #00bdff 0%, #bf0085 100%);

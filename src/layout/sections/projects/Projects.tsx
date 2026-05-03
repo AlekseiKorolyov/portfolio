@@ -56,12 +56,18 @@ export const Projects = () => {
             <Container >
                     <SectionTitle>Projects</SectionTitle>
                     <SectionText>Things I’ve built so far</SectionText>
-                <GridWrapper minmax={"373px, auto"} gap={"49px"}>
+                <GridWrapper minmax={"320px, auto"} gap={"50px"}>
                     {
                         progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}
                         />)
                     }
                 </GridWrapper>
+                {/*<MobileProjects>*/}
+                {/*    {*/}
+                {/*        progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}*/}
+                {/*        />)*/}
+                {/*    }*/}
+                {/*</MobileProjects>*/}
             </Container>
         </StyledProjects>
     );

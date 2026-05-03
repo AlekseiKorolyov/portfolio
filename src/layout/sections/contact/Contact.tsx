@@ -11,10 +11,10 @@ export const Contact = () => {
             <Container>
                 <SectionTitle>
                     For any questions please mail me:
+                    <LinkMail href="mailto:email">
+                        hi@pavanmg.in
+                    </LinkMail>
                 </SectionTitle>
-                <LinkMail as="a" href="mailto:email">
-                    hi@pavanmg.in
-                </LinkMail>
                 <StyledForm>
                     <Field placeholder={"name"}/>
                     <Field placeholder={"subject"}/>
@@ -73,7 +73,8 @@ const Field = styled.input`
 ;
 `
 
-const LinkMail = styled(SectionTitle)`
+const LinkMail = styled.a`
+    display: block;
     background: linear-gradient(19.49304203489544deg, #00c0fd 0%, #e70faa 100%);
     background-clip: text;
     color: transparent;
