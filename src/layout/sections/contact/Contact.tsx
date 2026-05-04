@@ -42,7 +42,6 @@ const StyledForm = styled.form`
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding-top: 100px;
 
 
     textarea {

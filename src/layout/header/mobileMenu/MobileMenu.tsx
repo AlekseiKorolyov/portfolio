@@ -35,6 +35,19 @@ export const MobileMenu = (props: { menuItems: Array<{ section: string, id: stri
     );
 };
 
+
+const StyledMobileMenu = styled.div`
+    margin: 0;
+    display: none;
+    @media ${theme.media.tablet} {
+        display: block;
+        ${FlexWrapper} {
+            justify-content: space-around;
+        }
+    }
+`
+
+
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
     top: 0;
@@ -112,14 +125,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     }
 `
 
-const StyledMobileMenu = styled.div`
-    margin: 0;
-    display: none;
-    @media ${theme.media.tablet} {
-        display: block;
-    }
-    
-`
+
 
 const Link = styled.a`
     font-family: DM Sans, sans-serif;
@@ -158,7 +164,7 @@ const ListItem = styled.li`
         background-color: ${theme.colors.font};
 
         position: absolute;
-        top: 30%;
+        top: 50%;
         left: -10px;
         right: -10px;
         z-index: 1;

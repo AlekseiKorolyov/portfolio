@@ -3,6 +3,7 @@ import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {Container} from "../../components/Container.ts";
 import {Logo} from "../../components/logo/Logo.tsx";
 import {LinkBlock} from "../../components/iconBlock/LinkBlock.tsx";
+import {theme} from "../styles/Theme.ts";
 
 
 export const Footer = () => {
@@ -34,6 +35,8 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     padding: 40px 0;
+    
+    
 `
 
 const WrapperFooter = styled.div`
@@ -44,6 +47,11 @@ const WrapperFooter = styled.div`
     width: 100%;
     border-bottom: 2px solid #42446e;
 
+    ${FlexWrapper} {
+        @media ${theme.media.tablet} {
+            flex-direction: column;
+        }
+    }
 `
 
 const LinkInfo = styled.a`

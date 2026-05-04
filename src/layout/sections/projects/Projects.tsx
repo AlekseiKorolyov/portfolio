@@ -10,6 +10,9 @@ import proj6 from "../../../assets/images/Rectangle-24.webp";
 import {Container} from "../../../components/Container.ts";
 import {SectionText} from "../../../components/SectionText.tsx";
 import {GridWrapper} from "../../../components/GridWrapper.tsx";
+import {Slider} from "./slider/Slider.tsx";
+import {theme} from "../../styles/Theme.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
 const progectsArr = [
     {
@@ -53,25 +56,75 @@ const progectsArr = [
 export const Projects = () => {
     return (
         <StyledProjects id={"projects"}>
-            <Container >
-                    <SectionTitle>Projects</SectionTitle>
-                    <SectionText>Things I’ve built so far</SectionText>
+            <Container>
+                <SectionTitle>Projects</SectionTitle>
+                <SectionText>Things I’ve built so far</SectionText>
                 <GridWrapper minmax={"320px, auto"} gap={"50px"}>
                     {
                         progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}
                         />)
                     }
                 </GridWrapper>
-                {/*<MobileProjects>*/}
-                {/*    {*/}
-                {/*        progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}*/}
-                {/*        />)*/}
-                {/*    }*/}
-                {/*</MobileProjects>*/}
+                <FlexWrapper direction={"column"} justify={"center"} align={"center"} gap={"20px"}>
+                    <Slider>
+
+                        {
+                            progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText}
+                                                            src={p.src}
+                            />)
+                        }
+
+                    </Slider>
+                    <Pagination>
+                        <span></span>
+                        <span className="active"></span>
+                        <span></span>
+                    </Pagination>
+                </FlexWrapper>
+
+
             </Container>
         </StyledProjects>
     );
 };
 
 const StyledProjects = styled.section`
+    ${GridWrapper} {
+        @media ${theme.media.tablet} {
+            display: none;
+        }
+    }
+
+    ${FlexWrapper} {
+        display: none;
+
+        @media ${theme.media.tablet} {
+            display: block;
+            max-width: 80vw;
+
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+`
+
+
+const Pagination = styled.span`
+    span {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        background-color: rgba(153, 153, 153, 50);
+        border-radius: 20px;
+
+        & + span {
+            margin-left: 5px;
+        }
+
+        &.active {
+            background-color: ${theme.colors.font};
+            width: 20px;
+        }
+    }
 `
