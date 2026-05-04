@@ -7,7 +7,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 export const MobileMenu = (props: { menuItems: Array<{ section: string, id: string }> }) => {
     return (
         <StyledMobileMenu>
-            <FlexWrapper justify={"center"} gap={"50px"}>
+            <FlexWrapper>
 
                 <BurgerButton isOpen={false}>
                     <span></span>
@@ -41,9 +41,6 @@ const StyledMobileMenu = styled.div`
     display: none;
     @media ${theme.media.tablet} {
         display: block;
-        ${FlexWrapper} {
-            justify-content: space-around;
-        }
     }
 `
 
