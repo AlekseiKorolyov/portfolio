@@ -67,7 +67,7 @@ export const Projects = () => {
                         />)
                     }
                 </GridWrapper>
-                <Slider progectsArr={items}/>
+                <Slider projectsArr={progectsArr} />
             </Container>
         </StyledProjects>
     );

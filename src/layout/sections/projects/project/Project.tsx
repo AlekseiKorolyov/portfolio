@@ -36,6 +36,7 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
+    padding: 2px;
     background-color: #363636;
     border-radius: 12px;
 

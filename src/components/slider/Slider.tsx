@@ -1,62 +1,43 @@
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import styled from "styled-components";
-import {Project} from "../../layout/sections/projects/project/Project.tsx";
+import { Project } from "../../layout/sections/projects/project/Project.tsx";
 
+// Описываем тип одного проекта для удобства
+type ProjectType = {
+    title: string
+    text: string
+    techText: string
+    src: string
+}
 
+type SliderPropsType = {
+    projectsArr: Array<ProjectType>
+}
 
-export const Slide = (props: {
-    progectsArr: Array<{ title: string, text: string, techText: string, src: string }>
-}) => {
+export const Slider = (props: SliderPropsType) => {
+    const items = props.projectsArr.map((p, index) => (
+        <Project
+            key={index}
+            title={p.title}
+            text={p.text}
+            techText={p.techText}
+            src={p.src}
+        />
+    ));
+
     return (
         <SliderWrapper>
-            {
-                props.progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}
-                />)
-            }
+            <AliceCarousel
+                mouseTracking
+                items={items}
+                disableButtonsControls={false}
+            />
         </SliderWrapper>
     );
 };
 
-
-const items = [
-    <div className="item" data-value="1">1</div>,
-    <div className="item" data-value="2">2</div>,
-    <div className="item" data-value="3">3</div>,
-    <div className="item" data-value="4">4</div>,
-    <div className="item" data-value="5">5</div>,
-];
-
-export const Slider = () => (
-    <SliderWrapper>
-        <AliceCarousel
-            mouseTracking
-            items={items}
-            controlsStrategy="alternate"
-        />
-    </SliderWrapper>
-);
-
-
 const SliderWrapper = styled.div`
-    max-width: 370px;
+    max-width: 80vw;
+    width: 90%;
 `
-
-/*import styled from "styled-components";
-import {Project} from "../project/Project.tsx";
-
-
-type SliderProjectPropsType = {
-    title: string;
-    text: string;
-    techText: string;
-    src: string
-};
-
-export const SliderProject = (props: { progectsArr: Array<{ title: string, text: string, techText: string, src: string}> }) => {
-    return (
-        {
-            props.progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}
-            />)
-        }
-    )}*/
