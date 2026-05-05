@@ -10,7 +10,7 @@ import proj6 from "../../../assets/images/Rectangle-24.webp";
 import {Container} from "../../../components/Container.ts";
 import {SectionText} from "../../../components/SectionText.tsx";
 import {GridWrapper} from "../../../components/GridWrapper.tsx";
-import {Slider} from "./slider/Slider.tsx";
+import {Slider} from "../../../components/slider/Slider.tsx";
 import {theme} from "../../styles/Theme.ts";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
@@ -65,24 +65,7 @@ export const Projects = () => {
                         />)
                     }
                 </GridWrapper>
-                <FlexWrapper direction={"column"} justify={"center"} align={"center"} gap={"20px"}>
-                    <Slider>
-
-                        {
-                            progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText}
-                                                            src={p.src}
-                            />)
-                        }
-
-                    </Slider>
-                    <Pagination>
-                        <span></span>
-                        <span className="active"></span>
-                        <span></span>
-                    </Pagination>
-                </FlexWrapper>
-
-
+                <Slider/>
             </Container>
         </StyledProjects>
     );
@@ -110,6 +93,20 @@ const StyledProjects = styled.section`
 `
 
 
+
+
+
+   /* <FlexWrapper direction={"column"} justify={"center"} align={"center"} gap={"20px"}>
+    <Slider/>
+    <Pagination>
+    <span></span>
+<span className="active"></span>
+<span></span>
+</Pagination>
+</FlexWrapper>*/
+
+
+/*
 const Pagination = styled.span`
     span {
         display: inline-block;
@@ -127,4 +124,4 @@ const Pagination = styled.span`
             width: 20px;
         }
     }
-`
+`*/
