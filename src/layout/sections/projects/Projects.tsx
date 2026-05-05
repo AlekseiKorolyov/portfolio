@@ -14,6 +14,8 @@ import {Slider} from "../../../components/slider/Slider.tsx";
 import {theme} from "../../styles/Theme.ts";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
+
+
 const progectsArr = [
     {
         title: "Project Tile goes here",
@@ -65,7 +67,7 @@ export const Projects = () => {
                         />)
                     }
                 </GridWrapper>
-                <Slider/>
+                <Slider progectsArr={items}/>
             </Container>
         </StyledProjects>
     );

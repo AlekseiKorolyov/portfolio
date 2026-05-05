@@ -1,6 +1,22 @@
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import styled from "styled-components";
+import {Project} from "../../layout/sections/projects/project/Project.tsx";
+
+
+
+export const Slide = (props: {
+    progectsArr: Array<{ title: string, text: string, techText: string, src: string }>
+}) => {
+    return (
+        <SliderWrapper>
+            {
+                props.progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}
+                />)
+            }
+        </SliderWrapper>
+    );
+};
 
 
 const items = [
@@ -16,6 +32,7 @@ export const Slider = () => (
         <AliceCarousel
             mouseTracking
             items={items}
+            controlsStrategy="alternate"
         />
     </SliderWrapper>
 );
