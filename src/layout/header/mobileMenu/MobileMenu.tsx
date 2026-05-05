@@ -1,18 +1,20 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../styles/Theme.ts";
-import {LinkBlock} from "../../../components/iconBlock/LinkBlock.tsx";
+// import {LinkBlock} from "../../../components/iconBlock/LinkBlock.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {useState} from "react";
 
 
 export const MobileMenu = (props: { menuItems: Array<{ section: string, id: string }> }) => {
+    const [menuIsOpen, setMenuIsOpen] = useState(false)
+    const onBurgerBtnClick = () => { setMenuIsOpen( !menuIsOpen ) }
     return (
         <StyledMobileMenu>
             <FlexWrapper>
-
-                <BurgerButton isOpen={false}>
+                <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
                     <span></span>
                 </BurgerButton>
-                <MobileMenuPopup isOpen={false}>
+                <MobileMenuPopup isOpen={menuIsOpen} onClick={()=>{setMenuIsOpen(false)}}>
                     <ul>
                         {props.menuItems.map((item, index) => {
                             return <ListItem key={index}>
@@ -29,7 +31,7 @@ export const MobileMenu = (props: { menuItems: Array<{ section: string, id: stri
                         })}
                     </ul>
                 </MobileMenuPopup>
-                <LinkBlock/>
+                {/*<LinkBlock/>*/}
             </FlexWrapper>
         </StyledMobileMenu>
     );
