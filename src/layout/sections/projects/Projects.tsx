@@ -16,7 +16,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
 
 
-const progectsArr = [
+const projectsArr = [
     {
         title: "Project Tile goes here",
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -63,11 +63,11 @@ export const Projects = () => {
                 <SectionText>Things I’ve built so far</SectionText>
                 <GridWrapper minmax={"320px, auto"} gap={"50px"}>
                     {
-                        progectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}
+                        projectsArr.map((p) => <Project title={p.title} text={p.text} techText={p.techText} src={p.src}
                         />)
                     }
                 </GridWrapper>
-                <Slider projectsArr={progectsArr} />
+                <Slider projectsArr={projectsArr} />
             </Container>
         </StyledProjects>
     );
@@ -93,37 +93,3 @@ const StyledProjects = styled.section`
         }
     }
 `
-
-
-
-
-
-   /* <FlexWrapper direction={"column"} justify={"center"} align={"center"} gap={"20px"}>
-    <Slider/>
-    <Pagination>
-    <span></span>
-<span className="active"></span>
-<span></span>
-</Pagination>
-</FlexWrapper>*/
-
-
-/*
-const Pagination = styled.span`
-    span {
-        display: inline-block;
-        width: 7px;
-        height: 7px;
-        background-color: rgba(153, 153, 153, 50);
-        border-radius: 20px;
-
-        & + span {
-            margin-left: 5px;
-        }
-
-        &.active {
-            background-color: ${theme.colors.font};
-            width: 20px;
-        }
-    }
-`*/

@@ -3,6 +3,8 @@ import photo from "../../../assets/images/50353683-1.webp"
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/Container.ts";
 import {theme} from "../../styles/Theme.ts";
+import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 export const About = () => {
     return (
@@ -13,10 +15,20 @@ export const About = () => {
                         <span>Hi 👋,</span>
                         <span>My name is</span>
                         <Name>Pavan MG</Name>
-                        <span>I build things for web </span>
+                        <span>
+                            <Typewriter
+                                options={{
+                                    strings: ["I build things for web", "A Web Developer", "A Frontend Developer"],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+                        </span>
                     </TextWrapper>
                     <PhotoWrapper>
-                        <Photo src={photo} alt="My photo"/>
+                        <Tilt>
+                            <Photo src={photo} alt="My photo"/>
+                        </Tilt>
                     </PhotoWrapper>
                 </FlexWrapper>
             </Container>

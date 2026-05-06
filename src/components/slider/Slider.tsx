@@ -2,6 +2,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import styled from "styled-components";
 import { Project } from "../../layout/sections/projects/project/Project.tsx";
+import {theme} from "../../layout/styles/Theme.ts";
 
 // Описываем тип одного проекта для удобства
 type ProjectType = {
@@ -38,6 +39,15 @@ export const Slider = (props: SliderPropsType) => {
 };
 
 const SliderWrapper = styled.div`
-    max-width: 80vw;
-    width: 90%;
+    display: none;
+
+    @media ${theme.media.tablet} {
+        display: block;
+        max-width: 80vw;
+
+        &:hover {
+            transform: none;
+            
+        }
+    }
 `

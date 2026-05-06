@@ -4,6 +4,7 @@ import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
 import {SectionText} from "../../../components/SectionText.tsx";
 import {GridWrapper} from "../../../components/GridWrapper.tsx";
+import {Fade} from "react-awesome-reveal";
 
 const stacksArr = [
     {
@@ -48,17 +49,18 @@ export const Stack = () => {
     return (
         <StyledStack id={"stack"}>
             <Container>
-                    <SectionTitle>My Tech Stack</SectionTitle>
-                    <SectionText>Technologies I’ve been working with recently</SectionText>
+                <SectionTitle>My Tech Stack</SectionTitle>
+                <SectionText>Technologies I’ve been working with recently</SectionText>
 
-                <GridWrapper  minmax={"120px, auto"} gap={"90px"}>
-                    {
-                        stacksArr.map((s) =>
+                <GridWrapper minmax={"120px, auto"} gap={"90px"}>
+                    <Fade cascade={true} damping={0.5}>
+                        {stacksArr.map((s) =>
                             <Skill iconId={s.iconId}
                                    viewBox={s.viewBox}
                                    title={s.title}
-                        />)
-                    }
+                            />)
+                        }
+                    </Fade>
                 </GridWrapper>
             </Container>
         </StyledStack>
