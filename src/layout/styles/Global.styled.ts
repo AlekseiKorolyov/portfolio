@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
     h2 {
-        font-size: calc((100vw - 360px) / (1600 - 360) * (58 - 30) + 30px);
+        font-size: clamp(30px, calc((100vw - 360px) / (1600 - 360) * (58 - 30) + 30px), 58px) ;
         font-weight: 700;
         //line-height: 1.2;
         color: #ccc;

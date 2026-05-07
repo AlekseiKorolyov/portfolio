@@ -40,9 +40,9 @@ const StyledProject = styled.div`
     background-color: #363636;
     border-radius: 12px;
 
-    &:hover {
+  /*  &:hover {
         transform: scale(1.1)
-    }
+    }*/
 `
 const Image = styled.img`
     width: 100%;
