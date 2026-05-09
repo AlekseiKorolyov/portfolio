@@ -28,26 +28,21 @@ export const GlobalStyle = createGlobalStyle`
     }
 
 
-    h2 {
+/*    h2 {
         font-size: clamp(30px, calc((100vw - 360px) / (1600 - 360) * (58 - 30) + 30px), 58px) ;
         font-weight: 700;
         //line-height: 1.2;
         color: #ccc;
 
-    }
+        
+    }*/
+    
 
-    h3 {
-        font-size: calc((100vw - 360px) / (1600 - 360) * (48 - 26) + 26px);
-        font-weight: 400;
-        //line-height: 1.2;
-        color: #a7a7a7;
-    }
-
-    h4 {
+   /* h4 {
         font-size: calc((100vw - 360px) / (1600 - 360) * (32 - 26) + 26px);
         font-weight: 400;
         color: #a7a7a7;
-    }
+    }*/
 
     h5 {
         font-size: calc((100vw - 360px) / (1600 - 360) * (20 - 16) + 16px);
@@ -55,9 +50,9 @@ export const GlobalStyle = createGlobalStyle`
         color: #a7a7a7;
     }
 
-    p {
+   /* p {
         font-size: calc((100vw - 360px) / (1600 - 360) * (18 - 14) + 14px);
-    }
+    }*/
 
     a {
         text-decoration: none;
