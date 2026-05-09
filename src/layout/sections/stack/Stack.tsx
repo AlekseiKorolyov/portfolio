@@ -53,7 +53,7 @@ export const Stack = () => {
                 <SectionText>Technologies I’ve been working with recently</SectionText>
 
                 <GridWrapper minmax={"120px, auto"} gap={"90px"}>
-                    <Fade cascade={true} damping={0.5}>
+                    <Fade cascade={true} damping={0.1}>
                         {stacksArr.map((s) =>
                             <Skill iconId={s.iconId}
                                    viewBox={s.viewBox}

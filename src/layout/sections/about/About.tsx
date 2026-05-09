@@ -12,7 +12,7 @@ export const About = () => {
         <StyledAbout id={"about"}>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
-                    <FlexWrapper direction={"column"} justify={"center"}>
+                    <TextWrapper>
                         <TextAbout>Hi 👋,</TextAbout>
                         <TextAbout>My name is</TextAbout>
                         <Name>Pavan MG</Name>
@@ -25,7 +25,7 @@ export const About = () => {
                                 }}
                             />
                         </TypewriterWrapper>
-                    </FlexWrapper>
+                    </TextWrapper>
                     <PhotoWrapper>
                         <Tilt>
                             <Photo src={photo} alt="My photo"/>
@@ -52,6 +52,11 @@ ${FlexWrapper} {
         gap: 50px;
         text-align: center;
     }
+`
+
+const TextWrapper = styled.div`
+    width: 100%;
+    height: 350px;
 `
 
 const TextAbout = styled.span`
@@ -90,7 +95,7 @@ const Photo = styled.img`
 `
 
 const Name = styled(TextAbout)`
-    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+    background: linear-gradient(90deg, #13b0f5, #e70faa 30%);
     background-clip: text;
     color: transparent;
 `

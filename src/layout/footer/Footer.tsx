@@ -46,6 +46,7 @@ const WrapperFooter = styled.div`
 
     width: 100%;
     border-bottom: 2px solid #42446e;
+    padding-bottom: 25px;
 
     ${FlexWrapper} {
         @media ${theme.media.tablet} {
