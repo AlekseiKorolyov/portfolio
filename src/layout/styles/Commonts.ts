@@ -11,13 +11,11 @@ type FontPropsType = {
 
 
 export const font = ({family, weight, color, lineHeight, Fmin, Fmax}: FontPropsType) => `
-    font-family: ${family || "Poppins"};
+    font-family: ${family || "'Poppins', sans-serif"};
     font-weight: ${weight || 400};
     color: ${color || theme.colors.font};
     lineHeight: ${lineHeight || 1.2};
     font-size: clamp(${Fmin}px, calc(${Fmin}px + (${Fmax} - ${Fmin}) * ((100vw - 360px) / (1600 - 360))), ${Fmax}px);
 `
 
-// ${font({family: "'Poppins', sans-serif", weight: 400, Fmax: 48, Fmin: 26})}
 
-// font-size: clamp(${Fmin}px, calc(${Fmin}px + (${Fmax} - ${Fmin}) * ((100vw - 360px) / (1440 - 360))), ${Fmax}px);

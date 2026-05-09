@@ -74,7 +74,7 @@ const Field = styled.input`
 
 const LinkMail = styled.a`
     display: block;
-    background: linear-gradient(19.49304203489544deg, #00c0fd 0%, #e70faa 100%);
+    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
     background-clip: text;
     color: transparent;
     margin-bottom: 100px;

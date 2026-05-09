@@ -40,7 +40,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    padding: 20px 0;
+    padding-top:15px;
     position: fixed;
     top: 0;
     left: 0;

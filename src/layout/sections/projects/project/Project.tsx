@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.ts";
+import {font} from "../../../styles/Commonts.ts";
 
 type ProjectPropsType = {
     title: string;
@@ -36,13 +37,9 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-    padding: 2px;
+    margin: 0 5px;
     background-color: #363636;
     border-radius: 12px;
-
-  /*  &:hover {
-        transform: scale(1.1)
-    }*/
 `
 const Image = styled.img`
     width: 100%;
@@ -57,21 +54,18 @@ const Description = styled.div`
 `
 
 
-const Title = styled.h4`
-
+const Title = styled.h3`
+    ${font({weight: 400, Fmax: 32, Fmin: 26})}
 `
 
 const Text = styled.p`
-    margin: 15px 0;
+    ${font({weight: 400, Fmax: 18, Fmin: 14})}
 `
 
-const TechText = styled.h5`
+const TechText = styled.p`
+    ${font({weight: 400, Fmax: 20, Fmin: 16})}
     margin-bottom: 30px;
     display: flex;
-
-    h5 {
-        margin: 0;
-    }
 
     span {
         white-space: nowrap;
@@ -85,14 +79,14 @@ const LinkGroup = styled.div`
 
 
 const ProjectLink = styled.a`
+    ${font({Fmax: 16, Fmin: 16})}
     margin: 0;
     display: flex;
     align-items: center;
     gap: 5px;
     color: ${theme.colors.font};
     text-decoration: none;
-    font-size: 16px;
-    font-family: sans-serif;
+
 
     span {
         text-decoration: underline;

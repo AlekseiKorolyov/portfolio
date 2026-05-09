@@ -26,16 +26,7 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1.2;
 
     }
-
-
-/*    h2 {
-        font-size: clamp(30px, calc((100vw - 360px) / (1600 - 360) * (58 - 30) + 30px), 58px) ;
-        font-weight: 700;
-        //line-height: 1.2;
-        color: #ccc;
-
-        
-    }*/
+    
     
 
    /* h4 {
@@ -79,6 +70,10 @@ export const GlobalStyle = createGlobalStyle`
 
     section {
         padding: 120px 0;
+        
+        @media ${theme.media.mobile} {
+            padding: 80px 0;
+        }
     }
 
 `

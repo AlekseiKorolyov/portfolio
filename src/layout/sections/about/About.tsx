@@ -3,19 +3,20 @@ import photo from "../../../assets/images/50353683-1.webp"
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/Container.ts";
 import {theme} from "../../styles/Theme.ts";
-import Typewriter from 'typewriter-effect';
-import Tilt from 'react-parallax-tilt';
+import Typewriter from "typewriter-effect";
+import Tilt from "react-parallax-tilt";
+import {font} from "../../styles/Commonts.ts";
 
 export const About = () => {
     return (
         <StyledAbout id={"about"}>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
-                    <TextWrapper>
-                        <span>Hi 👋,</span>
-                        <span>My name is</span>
+                    <FlexWrapper direction={"column"} justify={"center"}>
+                        <TextAbout>Hi 👋,</TextAbout>
+                        <TextAbout>My name is</TextAbout>
                         <Name>Pavan MG</Name>
-                        <span>
+                        <TypewriterWrapper>
                             <Typewriter
                                 options={{
                                     strings: ["I build things for web", "A Web Developer", "A Frontend Developer"],
@@ -23,8 +24,8 @@ export const About = () => {
                                     loop: true,
                                 }}
                             />
-                        </span>
-                    </TextWrapper>
+                        </TypewriterWrapper>
+                    </FlexWrapper>
                     <PhotoWrapper>
                         <Tilt>
                             <Photo src={photo} alt="My photo"/>
@@ -33,7 +34,8 @@ export const About = () => {
                 </FlexWrapper>
             </Container>
         </StyledAbout>
-    );
+    )
+        ;
 };
 
 const StyledAbout = styled.section`
@@ -42,30 +44,22 @@ const StyledAbout = styled.section`
     display: flex;
     overflow: hidden;
 
-    ${FlexWrapper} {
-        @media ${theme.media.tablet} {
-            flex-direction: column-reverse;
-            gap: 50px;
-            text-align: center;
-        }
+}
+
+${FlexWrapper} {
+    @media ${theme.media.tablet} {
+        flex-direction: column-reverse;
+        gap: 50px;
+        text-align: center;
+    }
 `
 
-const TextWrapper = styled.h2`
-    max-width: 636px;
-    font-family: Poppins sans-serif;
-
-    font-size: calc((100vw - 360px) / (1600 - 360) * (58 - 29) + 29px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: #d9d9d9;
-
+const TextAbout = styled.span`
+    ${font({weight: 700, color: "#d9d9d9", Fmax: 58, Fmin: 29})}
+    display: block;
+    width: 100%;
     text-align: left;
-    text-decoration: none;
-    margin: 0;
 
-    span {
-        display: block;
-    }
 `
 
 const PhotoWrapper = styled.div`
@@ -95,9 +89,10 @@ const Photo = styled.img`
     background-clip: content-box;
 `
 
-const Name = styled.span`
-    background: linear-gradient(19.49304203489544deg, #00c0fd 0%, #e70faa 100%);
+const Name = styled(TextAbout)`
+    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
     background-clip: text;
     color: transparent;
 `
 
+const TypewriterWrapper = styled(TextAbout)``

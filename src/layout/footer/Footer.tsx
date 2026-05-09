@@ -62,7 +62,7 @@ const Copyright = styled.p`
     padding: 20px 0;
     opacity: 0.5;
     text-align: center;
-    background: linear-gradient(19.49304203489544deg, #00bdff 0%, #bf0085 100%);
+    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
     background-clip: text;
 
     span {
